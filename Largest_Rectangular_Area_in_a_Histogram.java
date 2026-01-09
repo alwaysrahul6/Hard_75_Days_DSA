@@ -8,7 +8,6 @@ package HARD_75_DAYS;
  *  Output: 100
  *  Explanation: We get the maximum area by picking bars highlighted above in green (50, and 60). The area is computed (smallest height) * (no. of the picked bars) = 50 * 2 = 100.
  * */
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
