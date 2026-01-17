@@ -1,6 +1,7 @@
 package HARD_75_DAYS;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,11 +11,20 @@ public class Count_of_Smaller_Numbers_After_Self {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Element :");
         String[]s = scanner.nextLine().split(" ");
+        int n = s.length;
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++){
+            arr[i] = Integer.parseInt(s[i]);
+        }
+        List<Integer> ans = countSmaller(arr);
+        for (int i = 0; i < ans.size(); i++) {
+            System.out.println(i);
+        }
 
 
     }
 
-    public List<Integer> countSmaller(int[] nums) {
+    public static List<Integer> countSmaller(int[] nums) {
         List<Integer> ans = new ArrayList<>();
         int n = nums.length;
         for (int i = 0; i < n; i++) {
@@ -43,7 +53,6 @@ public class Count_of_Smaller_Numbers_After_Self {
     Pair[] temp;
 
     public List<Integer> countSmall(int[] arr) {
-
         int n = arr.length;
         count = new int[n];
         temp = new Pair[n];
@@ -52,14 +61,12 @@ public class Count_of_Smaller_Numbers_After_Self {
         for (int i = 0; i < n; i++) {
             pair[i] = new Pair(arr[i], i);
         }
-
+   
          mergeSort(pair, 0, n - 1);
-
         List<Integer> result = new ArrayList<>();
         for (int c : count) {
             result.add(c);
         }
-
         return result;
     }
 
