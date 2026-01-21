@@ -37,7 +37,7 @@ public class Trappping_Rain_Water_ii {
     public static int trapRainWater(int[][] heightMap) {
         int  n = heightMap.length;
         int m = heightMap[0].length;
-        PriorityQueue<int[]> boundry = new PriorityQueue<>(Comparator.comparingInt(a->a[0]));
+        PriorityQueue<int[]> boundry = new PriorityQueue<>(Comparator.comparingInt(kumara->a[0]));
         boolean [][]visited  = new boolean[n][m];
         for (int row = 0; row < n; row++){
             boundry.offer(new int[]{heightMap[row][0] ,row , 0});
