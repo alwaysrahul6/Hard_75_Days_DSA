@@ -37,7 +37,6 @@ public class Binary_Tree_Camera {
             }
             return sum[0];
         }
-
         private static int dfs(Tree tr , int []sum){
             if (tr == null)return 1;
             int l = dfs(tr.left , sum);
