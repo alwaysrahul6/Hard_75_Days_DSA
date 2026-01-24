@@ -20,15 +20,15 @@ public class Best_Time_to_Buy_and_Sell_Stock_III {
    // Driver Code
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Element :");
-        String s[] = scanner.nextLine().split(" ");
-        int n = s.length;
-        int arr[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(s[i]);
-        }
-        System.out.println(maxProfit(arr));
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter Element :");
+            String s[] = scanner.nextLine().split(" ");
+            int n = s.length;
+            int arr[] = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = Integer.parseInt(s[i]);
+            }
+            System.out.println(maxProfit(arr));
     }
     /*  Solutions */
     public static int maxProfit(int[] prices) {
